@@ -7,11 +7,8 @@ include(CTest)
 # build options
 option(wave_enable_tests "Build Unit tests" ON)
 
-# if cmake osx deployment target is defined, don't override the cxx standard
-if (NOT CMAKE_OSX_DEPLOYMENT_TARGET)
-  # use of c++14
-  set(CMAKE_CXX_STANDARD 14)
-endif()
+# use of c++14
+set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_DEBUG_POSTFIX d)  # add the d postfix to generated libraries
 
 if(wave_enable_tests)
